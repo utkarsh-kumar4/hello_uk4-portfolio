@@ -1,0 +1,782 @@
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------- Box1 styling starts here. ---------------------------------------- */
+.box1 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+    /* Navbar-section styling starts here. */
+    .navbar {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        padding: 10px 0;
+        z-index: 10;
+    }
+    .logo {
+        background-color: #ffffff;
+        padding: 10px;
+        margin: 20px 0;
+    }
+    .name, .copyright {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .name .uk {
+        margin-right: 10px;
+    }
+    .links {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .links a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.75rem;
+        text-decoration: none;
+        padding: 10px;
+        color: black;
+    }
+    .links .work:hover {
+        color: #e24847;
+    }
+    .links .profile:hover {
+        color: #dbacff;;
+    }
+    .links .contact:hover {
+        color: #028f64;
+    }
+    /* Navbar-section styling ends here. */
+
+    /*  Hero-section styling starts here. */
+    .hero-section {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 2.5vw 2.5vw 2.5vw;
+    }
+    .left {
+        width: 45vw;
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .left .up p {
+        font-size: 1.75rem;
+        font-weight: 400;
+        margin: 0;
+        margin-left: 10px;
+    }
+    .left .up .hero-name {
+        width: 100%;
+        margin-left: 10px;
+        font-weight: 700;
+        font-size: 3.5rem;
+    }
+    .left .down p {
+        margin: 0;
+    }
+    .left .down .down-up {
+        font-size: 1.75rem;
+        font-weight: 400;
+        margin: 0;
+        margin-left: 10px;
+    }
+    .left .down .down-down {
+        font-size: 1.75rem;
+        font-weight: 400;
+        padding: 0;
+        margin-left: 10px;
+    }
+    .right {
+        position: relative;
+        width: 45vw;
+        height: 30vw;
+    }
+    .right img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .circle {
+        position: absolute;
+        height: 12.5vw;
+        width: 12.5vw;
+        border-radius: 50%;
+        transform: translate(25%,-25%);
+        background-color: #e24847;
+    }
+    .cricle a {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+    .circle a img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        transform: scale(1.0);
+        transition: transform 0.2s ease-in-out;
+    }
+    .circle img:hover {
+        transform: scale(1.1);
+        transition: transform 0.2s ease-in-out;
+    }
+    /*  Hero-section styling ends here. */
+
+    .left,.right {
+        animation: fade-up 0.75s ease-out;;
+    }
+    @keyframes fade-up {
+        0% {
+            opacity: 0;
+            transform: translateY(100px) scale(0.95);
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px) scale(1);
+        }
+    }
+/* Box1 breakpoints start here. */
+@media (max-width: 1080px) or (max-aspect-ratio: 1/1){
+    .navbar {
+        /* align-items: flex-start; */
+        padding: 0;
+    }
+    .logo span {
+        font-size: 1.25rem;
+    }
+    .links {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px 20px;
+    }
+    .links a {
+        font-size: 1.25rem;
+        padding: 2.5px;
+    }
+    .hero-section {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+    .hero-section .left,.right {
+        width: 100%;
+    }
+    .hero-section .left {
+        padding: 5px;
+    }
+    .circle {
+        display: none;
+    }
+    .right {
+        display: none;
+    }
+    .left {
+        align-items: center;
+    }
+    .left p {
+        text-align: center;
+        padding: 5px;
+    }
+    .left .up p {
+        margin-left: 0;
+    }
+    .left .up .hero-name {
+        margin-left: 0;
+    }
+    .left .down .down-up {
+        margin-left: 0;
+    }
+    .left .down .down-down {
+        margin-left: 0;
+    }
+}
+@media (min-width: 1600px) {
+    .left .up p {
+        font-size: 2.25rem;
+    }
+    .left .up .hero-name {
+        font-size: 4rem;
+    }
+    .left .down .down-up {
+        font-size: 2.25rem;
+    }
+    .left .down .down-down {
+        font-size: 2.25rem;
+    }
+}
+@media (max-width: 1200px) {
+    .left .up p {
+        font-size: 1.5rem;
+    }
+    .left .up .hero-name {
+        font-size: 3rem;
+    }
+    .left .down .down-up {
+        font-size: 1.5rem;
+    }
+    .left .down .down-down {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 700px) {
+    .left .up p {
+        font-size: 1.25rem;
+    }
+    .left .up .hero-name {
+        font-size: 2.5rem;
+    }
+    .left .down .down-up {
+        font-size: 1.25rem;
+    }
+    .left .down .down-down {
+        font-size: 1.25rem;
+    }
+}
+@media (max-width: 450px) {
+    .left .up p {
+        font-size: 1rem;
+    }
+    .left .up .hero-name {
+        font-size: 2.25rem;
+    }
+    .left .down .down-up {
+        font-size: 1rem;
+    }
+    .left .down .down-down {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 350px) {
+    .left .up p {
+        font-size: 0.75rem;
+    }
+    .left .up .hero-name {
+        font-size: 2rem;
+    }
+    .left .down .down-up {
+        font-size: 0.75rem;
+    }
+    .left .down .down-down {
+        font-size: 0.75rem;
+    }
+}
+@media (max-height: 750px) {
+    .hero-section {
+        height: 100vh;
+        /* padding-top: 20vh; */
+    }
+    .right {
+        height: 50vh;
+        display: none;
+    }
+}
+@media (max-height: 325px) and (max-width: 600px) {
+    .left {
+        align-items: flex-start;
+        margin-top: 10vh;
+    }
+    .left p {
+        text-align: left;
+        padding: 0;
+    }
+}
+@media (max-aspect-ratio: 1/1) and (min-width: 800px){
+    .left .up p {
+        font-size: 2rem;
+    }
+    .left .up .hero-name {
+        font-size: 3.5rem;
+    }
+    .left .down .down-up {
+        font-size: 2rem;
+    }
+    .left .down .down-down {
+        font-size: 2rem;
+    }
+}
+@media (max-aspect-ratio: 1/1) and (min-width: 1000px){
+    .left .up p {
+        font-size: 2.5rem;
+    }
+    .left .up .hero-name {
+        font-size: 4rem;
+    }
+    .left .down .down-up {
+        font-size: 2.5rem;
+    }
+    .left .down .down-down {
+        font-size: 2.5rem;
+    }
+}
+/* Box1 breakpoints end here. */
+/* ---------------------------------------- Box1 styling ends here. ----------------------------------------  */
+
+/* ---------------------------------------- Box2 styling starts here. ---------------------------------------- */
+.box2 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #dae5e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .box2-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+        width: 90vw;
+    }
+    .box2-box .seniors,.others {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .box2-box .seniors p,.others p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: black;
+        font-size: 3rem;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    .box2-box .seniors .line-one {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .box2-box .seniors .line-two {
+        width: 80%;
+        padding: 20px 0;
+    }
+    .box2-box .seniors .line-three {
+        align-self: flex-end;
+        text-align: right;
+        width: 75%;
+        margin-bottom: 20px;
+    }
+    .invert-background {
+        background-color: #dae5e8;
+    }
+    .box2-box .invert-color p {
+        color: black;
+    }
+    .box2-box .others .line-one {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-align: right;
+    }
+    .box2-box .others .line-two {
+        width: 100%;
+        text-align: left;
+        padding: 20px 0;
+    }
+    .box2-box .others .line-three {
+        align-self: flex-end;
+        text-align: right;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .box2-box .others .line-three a {
+        text-decoration: none;
+        color: #30d867;
+    }
+    .box2-box .others .line-three a:hover {
+        color: #028f64;
+    }
+    .box2-box .line-four {
+        width: 100%;
+        padding: 10px;
+    }
+    .box2-box .seniors .line-four {
+        color: black;
+        background-color: #ffffff;
+    }
+    .box2-box .others .line-four {
+        color: #ffffff;
+        background-color: #272727;
+    }
+/* Box2 breakpoints start here. */
+@media (min-width: 1600px){
+    .box2-box .seniors p,.others p {
+        font-size: 3.75rem;
+    }
+}
+@media (max-width: 1200px){
+    .box2-box .seniors p,.others p {
+        font-size: 2.75rem;
+    }
+}
+@media (max-width: 1000px){
+    .box2-box .seniors p,.others p {
+        font-size: 2.25rem;
+    }
+}
+@media (max-width: 800px){
+    .box2-box .seniors p,.others p {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 600px){
+    .box2-box .seniors p,.others p {
+        font-size: 1.75rem;
+    }
+}
+@media (max-width: 475px){
+    .box2-box .seniors p,.others p {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 350px){
+    .box2-box .seniors p,.others p {
+        font-size: 1.25rem;
+    }
+}
+@media (max-height: 500px){
+    .box2 {
+        min-height: 750px;
+    }
+}
+/* Box2 breakpoints end here. */
+/* ---------------------------------------- Box2 styling ends here. ---------------------------------------- */
+
+/* ---------------------------------------- Box3 styling starts here. ---------------------------------------- */
+.box3 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    position: relative;
+}
+    /* Div styling starts here. */
+    .box3-box {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+    }
+    .box3-box div {
+        height: 100vh;
+        width: 2.5vw;
+        background-color: #7dcdfa;
+    }
+    .card-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 450px;
+        width: 90vw;
+    }
+    .image-list {
+        display: grid;
+        grid-template-columns: repeat(21,1fr);
+        gap: 20px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        height: 100%;
+        width: 100%;
+    }
+    .image-item::-webkit-scrollbar {
+        display: none;
+    }
+    .image-list .image-item {
+        width: 320px;
+        height: 450px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+    .image-list .image-item:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease-in-out;
+    }
+    .image-list .move-1 {
+        object-position: 0% 0%;
+    }
+    .image-list .move-2 {
+        object-position: 0% 0%;
+    }
+    /* Div styling ends here. */
+/* Box3 breakpoints start here. */
+@media (max-width: 800px){
+    .card-container {
+        width: 90vw;
+        height: 50vh;
+    }
+    .image-list .image-item {
+        width: 80vw;
+        height: 50vh;
+    }
+}
+@media (max-height: 450px){
+    .card-container {
+        height: 90vh;
+    }
+    .image-list .image-item {
+        height: 90vh;
+    }
+    .image-list .move-1 {
+        object-position: 0% 0%;
+    }
+    .image-list .move-2 {
+        object-position: 0% 0%;
+    }
+}
+/* Box3 breakpoints end here. */
+/* ---------------------------------------- Box3 styling ends here. ---------------------------------------- */
+
+/* ---------------------------------------- Box4 styling starts here. ---------------------------------------- */
+.box4 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+}
+    .box4-box p, .find-here a span {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 4rem;
+        margin: 0;
+    }
+    .box4-box p {
+        padding-top: 10px;
+        margin-bottom: 40px;
+    }
+    .find-here a {
+        text-decoration: none;
+        line-height: 3rem;
+        padding: 0;
+        margin: 0;
+    }
+    .find-here .work span:hover {
+        color: #e24847;
+    }
+    .find-here .profile span:hover {
+        color: #dbacff;
+    }
+    .find-here .contact span:hover {
+        color: #028f64;
+    }
+/* Box4 breakpoints start here. */
+@media (min-width: 1440px) {
+    .box4-box p {
+        font-size: 5rem;
+    }
+    .find-here a span {
+        font-size: 5rem;
+    }
+    .find-here a {
+        line-height: 4rem;
+    }
+}
+@media (max-width: 1080px) {
+    .box4 {
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    .box4-box p {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 760px) {
+    .box4-box p,.find-here a span {
+        font-size: 3rem;
+    }
+    .box4-box p {
+        margin-bottom: 20px;
+    }
+    .find-here a {
+        line-height: 2rem;
+    }
+}
+@media (max-width: 500px) {
+    .box4-box p,.find-here a span {
+        font-size: 2.5rem;
+    }
+}
+/* Box4 breakpoints end here. */
+/* ---------------------------------------- Box4 styling ends here. ---------------------------------------- */
+
+/* ---------------------------------------- Box5 styling starts here. ---------------------------------------- */
+.box5 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+    .box5-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    .box5-box > a {
+        font-family: "Montserrat", sans-serif;
+        color: black;
+        font-size: 4rem;
+        font-weight: 500;
+        margin: 0;
+        text-decoration: none;
+        width: 95%;
+    }
+    .box5-box p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        width: 95%;
+        margin-bottom: 0;
+        padding-left: 5px;
+    }
+    .box5-box .contact-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 95%;
+        margin: 0;
+    }
+    .box5-box .contact-list a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: black;
+        font-size: 4rem;
+        line-height: 3.5rem;
+        margin: 0;
+        text-decoration: none;
+        padding: 0;
+    }
+    .box5-box .download-cv:hover {
+        color: #ec0d9a;
+    }
+    .box5-box .linkedin:hover {
+        color: #0b65c2;
+    }
+    .box5-box .email-me:hover {
+        color: #e24847;
+    }
+    .box5-box .instagram:hover {
+        color: #fe8911;
+    }
+    .box5-box .facebook:hover {
+        color: #0765ff;
+    }
+    .footer {
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+    }
+    .footer p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        color: black;
+        font-size: 1.25rem;
+        margin: 0;
+        padding: 0 20px;
+    }
+/* Box5 breakpoints start here. */
+@media (min-width: 1440px) {
+    .box5-box p {
+        font-size: 1.75rem;
+    }
+    .box5-box a {
+        font-size: 5rem;
+    }
+    .box5-box .contact-list a {
+        font-size: 5rem;
+        line-height: 4rem;
+    }
+}
+@media (max-width: 760px) {
+    .box5-box p {
+        font-size: 1.25rem;
+    }
+    .box5-box a {
+        font-size: 3rem;
+    }
+    .box5-box .contact-list a {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .footer p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .box5-box p {
+        font-size: 1rem;
+    }
+    .box5-box a {
+        font-size: 2.25rem;
+    }
+    .box5-box .contact-list a {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+    }
+    .footer p {
+        font-size: 0.75rem;
+    }
+}
+@media (max-height: 500px) {
+    .box5 {
+        height: 125vh;
+    }
+}
+/* Box5 breakpoints end here. */
+/* ---------------------------------------- Box5 styling ends here. ---------------------------------------- */

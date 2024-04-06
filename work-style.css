@@ -1,0 +1,611 @@
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------- Box1 styling starts here. ---------------------------------------- */
+.box1 {
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    width: 100vw;
+}
+    /* Navbar-section styling starts here. */
+    .navbar {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+        padding: 10px 0;
+        z-index: 10;
+    }
+    .logo {
+        background-color: #ffffff;
+        padding: 10px;
+        margin: 20px 0;
+    }
+    .name, .copyright {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .name .uk {
+        margin-right: 10px;
+    }
+    .links {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .links a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.75rem;
+        text-decoration: none;
+        padding: 10px;
+        color: black;
+    }
+    .links .home:hover {
+        color: #7dcdfa;
+    }
+    .links .work {
+        color: #e24847;
+    }
+    .links .profile:hover {
+        color: #dbacff;;
+    }
+    .links .contact:hover {
+        color: #028f64;
+    }
+    /* Navbar-section styling ends here. */
+
+/* Box1 breakpoints start here. */
+@media (max-width: 1080px) or (max-aspect-ratio: 1/1){
+    .navbar {
+        align-items: flex-start;
+        padding: 0;
+    }
+    .logo span {
+        font-size: 1.25rem;
+    }
+    .links {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px 20px;
+    }
+    .links a {
+        font-size: 1.25rem;
+        padding: 2.5px;
+    }
+}
+/* Box1 breakpoints end here. */
+/* ---------------------------------------- Box1 styling ends here. ----------------------------------------  */
+
+/* ---------------------------------------- Box2 styling starts here. ---------------------------------------- */
+.box2 {
+    margin: 0;
+    padding: 0;
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .box2-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+    }
+    .box2-box h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 5rem;
+        margin: 0;
+        line-height: 4rem;
+        align-self: flex-start;
+    }
+    .box2-box p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.25rem;
+        margin: 0;
+        width: 50%;
+        text-align: justify;
+    }
+    .box2-box p a {
+        text-decoration: none;
+        color: #e24847;
+    }
+    .box2-box a:hover {
+        color: #028f64;
+    }
+    .left-div,.right-div {
+        animation: fade-opacity 0.75s ease-out;
+    }
+    @keyframes fade-opacity {
+        0% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0.75;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+/* Box2 breakpoints start here. */
+@media (min-width: 1440px) {
+    .box2-box h1 {
+        font-size: 5.5rem;
+        line-height: 5rem;
+    }
+    .box2-box p {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+}
+@media (max-width: 1200px) {
+    .box2-box h1 {
+        font-size: 4.5rem;
+        line-height: 3.5rem;
+    }
+    .box2-box p {
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+}
+@media (max-width: 1080px) {
+    .box2-box {
+        flex-direction: column;
+    }
+    .box2-box h1 {
+        font-size: 4rem;
+        line-height: 3rem;
+        align-self: flex-start;
+        margin-bottom: 30px;
+    }
+    .box2-box p {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        width: 100%;
+    }
+}
+@media (max-width: 760px) {
+    .box2-box h1 {
+        font-size: 3.5rem;
+        line-height: 2.5rem;
+    }
+    .box2-box p {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+}
+@media (max-width: 500px) {
+    .box2-box h1 {
+        font-size: 3rem;
+        line-height: 2rem;
+    }
+    .box2-box p {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+@media (max-height: 600px) {
+    .box2 {
+        height: 100vh;
+    }
+}
+/* Box2 breakpoints end here. */
+/* ---------------------------------------- Box2 styling ends here. ----------------------------------------  */
+
+/* ---------------------------------------- Box3 styling starts here. ---------------------------------------- */
+.box3 {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .box3-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+    .box3-box a {
+        display: flex;
+        width: 100vw
+    }
+    .box3-box a .left,.right {
+        width: 50vw;
+        height: 40vw;
+    }
+    .box3-box a .right {
+        min-height: 300px;
+    }
+    .box3-box a .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .box3-box a .left .up,.down {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .box3-box a .left .up .up-one {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        margin: 20px 0 0 30px;
+    }
+    .box3-box a .left .up .up-two {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        margin: 20px 30px 0 0px;
+    }
+    .box3-box a .left .down .down-one {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 3rem;
+        margin: 20px 0 10px 30px;
+    }
+    .box3-box a .left .down .down-two {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 3rem;
+        margin-right: 30px;
+        line-height: 3rem;
+    }
+    .box3-box a {
+        text-decoration: none;
+        color: black;
+    }
+    .box3-box .left:hover {
+        background-color: #DCE5E8;
+    }
+    .box3-box .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box3-box a .right-one img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0% 0%;
+        background-repeat: no-repeat;
+    }
+    .box3-box a .right-two img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+    }
+    .box3-box a .right-three img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+    }
+/* Box3 breakpoints start here. */
+@media (min-width: 1600px) {
+    .box3-box a .left .up .up-one {
+        font-size: 2.25rem;
+    }
+    .box3-box a .left .up .up-two {
+        font-size: 2.25rem;
+    }
+    .box3-box a .left .down .down-one {
+        font-size: 5rem;
+    }
+    .box3-box a .left .down .down-two {
+        font-size: 4rem;
+        line-height: 3rem;
+    }
+}
+@media (max-width: 1080px) {
+    .box3-box a {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+    .box3-box a .left,.right {
+        width: 100vw;
+    }
+    .box3-box a .left {
+        height: fit-content;
+        padding: 1rem 0;
+    }
+}
+@media (max-width: 630px) {
+    .box3-box a .left .up .up-one {
+        font-size: 1.5rem;
+        margin: 20px 0 0 30px;
+    }
+    .box3-box a .left .up .up-two {
+        font-size: 1.5rem;
+        margin: 20px 30px 0 0px;
+    }
+    .box3-box a .left .down .down-one {
+        font-size: 2.5rem;
+        margin: 20px 0 0 30px;
+    }
+    .box3-box a .left .down .down-two {
+        font-size: 2.5rem;
+        margin-right: 30px;
+        line-height: 1.5rem;
+    }
+}
+@media (max-width: 500px) {
+    .box3-box a .left .up .up-one {
+        font-size: 1rem;
+        margin: 20px 0 0 10px;
+    }
+    .box3-box a .left .up .up-two {
+        font-size: 1rem;
+        margin: 20px 10px 0 0px;
+    }
+    .box3-box a .left .down .down-one {
+        font-size: 2rem;
+        margin: 20px 0 0 10px;
+    }
+    .box3-box a .left .down .down-two {
+        font-size: 2rem;
+        margin-right: 30px;
+        line-height: 1rem;
+    }
+}
+@media (max-width: 400px) {
+    .box3-box a .left .up .up-one {
+        font-size: 1rem;
+        margin: 20px 0 0 10px;
+    }
+    .box3-box a .left .up .up-two {
+        font-size: 1rem;
+        margin: 20px 10px 0 0px;
+    }
+    .box3-box a .left .down .down-one {
+        font-size: 1.75rem;
+        margin: 20px 0 0 10px;
+    }
+    .box3-box a .left .down .down-two {
+        font-size: 1.75rem;
+        margin-right: 30px;
+        line-height: 0.75rem;
+    }
+}
+/* Box3 breakpoints end here. */
+/* ---------------------------------------- Box3 styling ends here. ---------------------------------------- */
+
+/* ---------------------------------------- Box4 styling starts here. ---------------------------------------- */
+.box4 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #272727;
+    display: flex;
+    justify-content: center;
+}
+    .box4-box p, .find-here a span {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 4rem;
+        margin: 0;
+    }
+    .box4-box p {
+        padding-top: 10px;
+        margin-bottom: 40px;
+    }
+    .find-here a {
+        text-decoration: none;
+        line-height: 3rem;
+        padding: 0;
+        margin: 0;
+    }
+    .find-here .work span {
+        color: #e24847;
+    }
+    .find-here .profile span:hover {
+        color: #dbacff;
+    }
+    .find-here .contact span:hover {
+        color: #028f64;
+    }
+/* Box4 breakpoints start here. */
+@media (min-width: 1440px) {
+    .box4-box p {
+        font-size: 5rem;
+    }
+    .find-here a span {
+        font-size: 5rem;
+    }
+    .find-here a {
+        line-height: 4rem;
+    }
+}
+@media (max-width: 1080px) {
+    .box4 {
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    .box4-box p {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 760px) {
+    .box4-box p,.find-here a span {
+        font-size: 3rem;
+    }
+    .box4-box p {
+        margin-bottom: 20px;
+    }
+    .find-here a {
+        line-height: 2rem;
+    }
+}
+@media (max-width: 500px) {
+    .box4-box p,.find-here a span {
+        font-size: 2.5rem;
+    }
+}
+/* Box4 breakpoints end here. */
+/* ---------------------------------------- Box4 styling ends here. ---------------------------------------- */
+
+/* ---------------------------------------- Box5 styling starts here. ---------------------------------------- */
+.box5 {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+    .box5-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    .box5-box > a {
+        font-family: "Montserrat", sans-serif;
+        color: black;
+        font-size: 4rem;
+        font-weight: 500;
+        margin: 0;
+        text-decoration: none;
+        width: 95%;
+    }
+    .box5-box p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        width: 95%;
+        margin-bottom: 0;
+        padding-left: 5px;
+    }
+    .box5-box .contact-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 95%;
+        margin: 0;
+    }
+    .box5-box .contact-list a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: black;
+        font-size: 4rem;
+        line-height: 3.5rem;
+        margin: 0;
+        text-decoration: none;
+        padding: 0;
+    }
+    .box5-box .download-cv:hover {
+        color: #ec0d9a;
+    }
+    .box5-box .linkedin:hover {
+        color: #0b65c2;
+    }
+    .box5-box .email-me:hover {
+        color: #e24847;
+    }
+    .box5-box .instagram:hover {
+        color: #fe8911;
+    }
+    .box5-box .facebook:hover {
+        color: #0765ff;
+    }
+    .footer {
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+    }
+    .footer p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        color: black;
+        font-size: 1.25rem;
+        margin: 0;
+        padding: 0 20px;
+    }
+/* Box5 breakpoints start here. */
+@media (min-width: 1440px) {
+    .box5-box p {
+        font-size: 1.75rem;
+    }
+    .box5-box a {
+        font-size: 5rem;
+    }
+    .box5-box .contact-list a {
+        font-size: 5rem;
+        line-height: 4rem;
+    }
+}
+@media (max-width: 760px) {
+    .box5-box p {
+        font-size: 1.25rem;
+    }
+    .box5-box a {
+        font-size: 3rem;
+    }
+    .box5-box .contact-list a {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .footer p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .box5-box p {
+        font-size: 1rem;
+    }
+    .box5-box a {
+        font-size: 2.5rem;
+    }
+    .box5-box .contact-list a {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    .footer p {
+        font-size: 0.75rem;
+    }
+}
+@media (max-height: 500px) {
+    .box5 {
+        height: 125vh;
+    }
+}
+/* Box5 breakpoints end here. */
+/* ---------------------------------------- Box5 styling ends here. ---------------------------------------- */

@@ -1,0 +1,266 @@
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------- Fixed section styling starts here. ---------------------------------------- */
+.fixed-navbar,.fixed-hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.fixed-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 10;
+}
+    /* Navbar section */
+    .logo {
+        background-color: #ffffff;
+        padding: 10px;
+        margin: 20px 0;
+    }
+    .name, .copyright {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .name .uk {
+        margin-right: 10px;
+    }
+    .links {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .links a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 1.75rem;
+        text-decoration: none;
+        padding: 10px;
+        color: black;
+    }
+    .links .home:hover {
+        color: #7dcdfa;
+    }
+    .links .work:hover {
+        color: #e24847;
+    }
+    .links .profile:hover {
+        color: #dbacff;;
+    }
+    .links .contact {
+        color: #028f64;
+    }
+/* Fixed navbar section breakpoints start here. */
+@media (max-width: 1080px) or (max-aspect-ratio: 1/1){
+    .fixed-navbar {
+        align-items: flex-start;
+        padding: 0;
+    }
+    .logo span {
+        font-size: 1.25rem;
+    }
+    .links {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 10px 20px;
+    }
+    .links a {
+        font-size: 1.25rem;
+        padding: 2.5px;
+    }
+}
+/* Fixed navbar section breakpoints end here. */
+
+    /* Hero section */
+    .box5-box {
+        top: 0;
+        left: 0;
+        transform: translate(0,25%);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    .box5-box > .scroll {
+        font-family: "Montserrat", sans-serif;
+        color: black;
+        font-size: 4rem;
+        font-weight: 500;
+        margin: 0;
+        text-decoration: none;
+        width: 95%;
+    }
+    .box5-box p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.5rem;
+        width: 95%;
+        margin-bottom: 0;
+        padding-left: 5px;
+    }
+    .box5-box .contact-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 95%;
+        margin: 0;
+    }
+    .box5-box .contact-list a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: black;
+        font-size: 4rem;
+        line-height: 3.5rem;
+        margin: 0;
+        text-decoration: none;
+        padding: 0;
+    }
+    .box5-box a:hover {
+        color: #ffffff;
+    }
+    .footer {
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+    }
+    .footer p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        color: black;
+        font-size: 1.25rem;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .fade-div {
+        animation: fade-opacity 0.75s ease-out;
+    }
+    @keyframes fade-opacity {
+        0% {
+            opacity: 0;
+        }
+        75% {
+            opacity: 0.75;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+/* Fixed hero section breakpoints start here. */
+@media (min-width: 1440px) {
+    .box5-box p {
+        font-size: 1.75rem;
+    }
+    .box5-box .scroll {
+        font-size: 5rem;
+    }
+    .box5-box .contact-list a {
+        font-size: 5rem;
+        line-height: 4rem;
+    }
+}
+@media (max-width: 760px) {
+    .box5-box p {
+        font-size: 1.25rem;
+    }
+    .box5-box .scroll {
+        font-size: 3rem;
+    }
+    .box5-box .contact-list a {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .footer p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .box5-box p {
+        font-size: 1rem;
+    }
+    .box5-box .scroll {
+        font-size: 2.5rem;
+    }
+    .box5-box .contact-list a {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    .footer p {
+        font-size: 0.75rem;
+    }
+}
+@media (max-height: 500px) {
+    .box5-box p {
+        font-size: 1rem;
+    }
+    .box5-box .scroll {
+        font-size: 2rem;
+    }
+    .box5-box .contact-list a {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+    }
+    .footer p {
+        font-size: 0.75rem;
+    }
+}
+@media (max-height: 400px) {
+    .box5-box {
+        margin-top: 2vh;
+    }
+    .box5-box p {
+        font-size: 0.75rem;
+    }
+    .box5-box .scroll {
+        font-size: 2rem;
+    }
+    .box5-box .contact-list a {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .footer p {
+        font-size: 0.5rem;
+    }
+}
+/* Fixed hero section breakpoints end here. */
+/* ---------------------------------------- Fixed section styling ends here. ---------------------------------------- */
+
+
+
+/* ---------------------------------------- Infinite-scroll section styling starts here. ---------------------------------------- */
+.infinite-scroll-container {
+    min-height: 100vh; /* Ensures the container fills the viewport */
+}
+
+.content-item {
+    height: 100vh; /* Adjust height as needed */
+    margin: 0;
+}
+/* ---------------------------------------- Infinite-scroll section styling ends here. ---------------------------------------- */
